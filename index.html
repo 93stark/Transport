@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Parcel Service Kolkata to Baghmundi · New Bharat Roadways</title>
+<meta name="description" content="New Bharat Roadways — daily parcel service Kolkata to Baghmundi. Track your shipment online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* New Bharat Roadways — one stylesheet for public site + staff portal */
+:root {
+  --navy: #13214a;
+  --navy-2: #1d3170;
+  --orange: #ee6a1c;
+  --orange-2: #d4570d;
+  --ink: #1b2233;
+  --muted: #667085;
+  --line: #e3e7ef;
+  --bg: #f5f6f9;
+  --card: #ffffff;
+  --green: #12805c;
+  --green-bg: #e7f6ef;
+  --red: #c0352b;
+  --red-bg: #fdecea;
+  --amber-bg: #fff4e5;
+  --radius: 10px;
+  --head: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font: 16px/1.55 var(--body); color: var(--ink); background: var(--bg); }
+h1, h2, h3 { font-family: var(--head); line-height: 1.15; color: var(--navy); margin: 0 0 .5em; letter-spacing: -.01em; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 800; }
+h2 { font-size: 1.35rem; font-weight: 700; }
+h3 { font-size: 1.1rem; font-weight: 700; }
+a { color: var(--navy-2); }
+img { max-width: 100%; }
+.muted { color: var(--muted); }
+.small { font-size: .85rem; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .02em; }
+.wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.main { padding-top: 24px; padding-bottom: 48px; min-height: 60vh; }
+
+/* Top bar */
+.topbar { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 10; }
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-family: var(--head); font-size: 1.15rem; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+.brand b { font-weight: 800; }
+.nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.nav a { color: #d6dcf0; text-decoration: none; padding: 8px 10px; border-radius: 6px; font-weight: 600; font-size: .95rem; }
+.nav a:hover, .nav a[aria-current="page"] { color: #fff; background: rgba(255,255,255,.1); }
+.nav a.btn { color: #fff; background: var(--orange); margin-left: 4px; }
+.nav a.btn:hover { background: var(--orange-2); }
+
+/* Buttons & forms */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 0; border-radius: 8px; background: var(--orange); color: #fff; font: 700 1rem var(--head); letter-spacing: .02em; padding: 11px 18px; text-decoration: none; cursor: pointer; white-space: nowrap; }
+.btn:hover { background: var(--orange-2); }
+.btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(238,106,28,.35); outline-offset: 1px; }
+.btn-outline { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 1.5px var(--navy); }
+.btn-outline:hover { background: var(--navy); color: #fff; }
+.btn-sm { padding: 7px 12px; font-size: .9rem; }
+.btn-lg { padding: 14px 24px; font-size: 1.1rem; }
+.btn-block { width: 100%; }
+.icon-btn { border: 0; background: none; color: var(--muted); font-size: 1.3rem; cursor: pointer; padding: 4px 8px; }
+.icon-btn:hover { color: var(--red); }
+
+label { display: block; font-weight: 600; font-size: .9rem; color: var(--ink); }
+label.inline { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+input, select, textarea { width: 100%; font: inherit; color: var(--ink); background: #fff; border: 1px solid #cdd3df; border-radius: 8px; padding: 10px 12px; margin-top: 4px; }
+input[type=checkbox], input[type=radio] { width: auto; margin: 0; accent-color: var(--orange); }
+input[type=file] { padding: 8px; background: var(--bg); }
+fieldset { border: 0; margin: 0; }
+legend { font: 700 1.15rem var(--head); color: var(--navy); padding: 0; margin-bottom: 12px; float: left; width: 100%; }
+legend + * { clear: both; }
+.hint { color: var(--muted); font-size: .85rem; margin: 8px 0 0; }
+code { background: var(--bg); padding: 2px 6px; border-radius: 4px; font-size: .85em; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
+.card.narrow { max-width: 420px; margin: 32px auto; }
+.card.narrow label { margin-bottom: 14px; }
+.card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.card-head h1, .card-head h2 { margin-bottom: 2px; }
+.card-head p { margin: 0; }
+.stack > * + * { margin-top: 0; }
+.grid-2, .grid-3 { display: grid; gap: 14px; }
+@media (min-width: 640px) { .grid-2 { grid-template-columns: 1fr 1fr; } .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+.radio-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 14px; font-weight: 600; }
+
+.alert { padding: 12px 14px; border-radius: 8px; margin-bottom: 16px; border: 1px solid; }
+.alert ul { margin: 6px 0 0 18px; padding: 0; }
+.alert-success { background: var(--green-bg); border-color: #b6e3cf; color: #0b5c41; }
+.alert-error { background: var(--red-bg); border-color: #f4c3be; color: #8a221a; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -4px; }
+table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 700; white-space: nowrap; }
+tr.row-due td { background: var(--amber-bg); }
+tr.row-off td { opacity: .5; }
+.entry-table td { padding: 4px; }
+.entry-table input { margin: 0; padding: 8px; min-width: 120px; }
+.entry-table input.w-sm { min-width: 70px; width: 80px; }
+.entry-table .idx { color: var(--muted); font-size: .85rem; text-align: right; width: 32px; }
+td.actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+td.actions form { margin: 0; }
+.inline-form { display: flex; gap: 6px; }
+.inline-form input { margin: 0; padding: 6px 8px; width: 140px; }
+.inline-actions { display: flex; gap: 10px; align-items: center; margin-top: 14px; flex-wrap: wrap; }
+.inline-actions select { width: auto; margin: 0; }
+.bulk { margin-bottom: 14px; }
+.bulk summary { cursor: pointer; font-weight: 600; color: var(--navy-2); }
+.bulk textarea { margin: 8px 0; }
+.sticky-actions { position: sticky; bottom: 0; background: linear-gradient(transparent, var(--bg) 30%); padding: 16px 0 8px; }
+
+/* Badges / stats */
+.badge { display: inline-block; font-size: .78rem; font-weight: 700; padding: 4px 10px; border-radius: 99px; letter-spacing: .02em; white-space: nowrap; }
+.badge-new { background: #eef1f7; color: var(--navy-2); }
+.badge-moving { background: #e8efff; color: #2343a8; }
+.badge-done { background: var(--green-bg); color: var(--green); }
+.badge-due { background: var(--red-bg); color: var(--red); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; color: var(--muted); font-size: .88rem; }
+.stat span { display: block; font: 800 1.8rem var(--head); color: var(--navy); }
+.stat-alert { border-color: #f4c3be; background: var(--red-bg); }
+.stat-alert span { color: var(--red); }
+
+/* Status updater trip list */
+.trip-list { display: grid; gap: 12px; }
+.trip { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--navy-2); border-radius: var(--radius); padding: 14px 16px; }
+.trip-due { border-left-color: var(--red); }
+.trip-head { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.trip-title { font: 800 1.2rem var(--head); color: var(--navy); text-decoration: none; margin-right: 8px; }
+.trip-last { margin: 6px 0 10px; }
+.update-form { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.update-form select, .update-form input { margin: 0; }
+@media (min-width: 720px) { .update-form { grid-template-columns: 170px 1fr 1.3fr auto; } }
+
+/* Public: hero + tracking */
+.hero { display: grid; gap: 24px; align-items: center; padding: 16px 0 8px; }
+@media (min-width: 860px) { .hero { grid-template-columns: 1.1fr 1fr; padding: 32px 0 16px; } }
+.eyebrow { color: var(--orange); font: 700 .9rem var(--head); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 8px; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); text-transform: uppercase; }
+.hero h1 span { color: var(--orange); }
+.lead { font-size: 1.1rem; color: #3b4459; max-width: 34em; }
+.track-card { background: var(--navy); color: #fff; border-radius: 14px; padding: 22px; box-shadow: 0 12px 30px -18px rgba(19,33,74,.6); }
+.track-card label { color: #fff; font: 700 1.25rem var(--head); }
+.track-card .hint { color: #b9c3e3; }
+.track-card-inline { margin-bottom: 24px; }
+.track-row { display: flex; gap: 8px; margin-top: 10px; }
+.track-row input { margin: 0; font-size: 1.05rem; text-transform: uppercase; border: 0; }
+.track-row input::placeholder { text-transform: none; }
+
+.section { margin-top: 40px; }
+.branches { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.branches li { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; font: 700 1.05rem var(--head); color: var(--navy); }
+.branches li::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--orange); border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+.features { display: grid; gap: 14px; }
+@media (min-width: 720px) { .features { grid-template-columns: repeat(3, 1fr); } }
+.features > div { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.features p { margin: 0; color: #3b4459; }
+.cta { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.cta p { margin: 0; color: var(--muted); }
+.cta-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.result { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
+.result-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+.result-head p { margin: 0; font-size: .85rem; }
+.progress { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); padding: 0; margin: 18px 0; counter-reset: s; }
+.progress li { position: relative; text-align: center; font-size: .78rem; color: var(--muted); padding-top: 26px; }
+.progress li::before { content: ""; position: absolute; top: 4px; left: 50%; transform: translateX(-50%); width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid #cdd3df; z-index: 1; }
+.progress li::after { content: ""; position: absolute; top: 10px; left: -50%; width: 100%; height: 2px; background: #cdd3df; }
+.progress li:first-child::after { display: none; }
+.progress li.done, .progress li.current { color: var(--navy); font-weight: 700; }
+.progress li.done::before { background: var(--orange); border-color: var(--orange); }
+.progress li.done::after, .progress li.current::after { background: var(--orange); }
+.progress li.current::before { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(238,106,28,.2); }
+.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px 18px; margin: 0 0 18px; }
+.facts dt { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.facts dd { margin: 2px 0 0; font-weight: 600; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 2px solid var(--line); }
+.timeline li { position: relative; padding: 0 0 16px 10px; }
+.timeline li::before { content: ""; position: absolute; left: -25px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--navy-2); }
+.timeline li:first-child::before { background: var(--orange); box-shadow: 0 0 0 4px rgba(238,106,28,.2); }
+.timeline time { display: block; font-size: .8rem; color: var(--muted); }
+.empty { text-align: center; padding: 32px 16px; background: var(--card); border: 1px dashed #cdd3df; border-radius: var(--radius); }
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+.photos a { display: block; text-decoration: none; color: var(--muted); font-size: .75rem; }
+.photos img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); }
+
+/* Footer */
+.footer { background: var(--navy); color: #d6dcf0; padding: 28px 0; font-size: .92rem; }
+.footer-grid { display: grid; gap: 16px; }
+@media (min-width: 760px) { .footer-grid { grid-template-columns: 1.3fr 1fr 1fr 1.6fr; } }
+.footer strong { color: #fff; font-family: var(--head); font-size: 1.05rem; }
+.footer p { margin: 4px 0 0; }
+.footer a { display: block; color: #fff; font: 700 1.15rem var(--head); text-decoration: none; }
+.footer .muted { color: #9aa6cc; font-size: .8rem; }
+.footer-address { color: #b9c3e3; }
+
+@media (max-width: 520px) {
+  .track-row { flex-direction: column; }
+  .brand span { font-size: 1rem; }
+  .progress li { font-size: .68rem; }
+}
+
+@media print {
+  .topbar, .footer, .no-print, .sticky-actions { display: none !important; }
+  body { background: #fff; }
+  .card { border: 0; padding: 0; }
+}
+</style>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJOZXcgQmhhcmF0IFJvYWR3YXlzIj4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iI2VlNmExYyIvPgogIDxwYXRoIGQ9Ik0xMCAyMGgyNnYyMEgxMHoiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJNMzYgMjZoOWw3IDd2N0gzNnoiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJNMzkgMjloNWw0IDRoLTl6IiBmaWxsPSIjMTMyMTRhIi8+CiAgPGNpcmNsZSBjeD0iMTkiIGN5PSI0MiIgcj0iNSIgZmlsbD0iIzEzMjE0YSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxjaXJjbGUgY3g9IjQ0IiBjeT0iNDIiIHI9IjUiIGZpbGw9IiMxMzIxNGEiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8cGF0aCBkPSJNMTQgMjZoMTRNMTQgMzFoMTAiIHN0cm9rZT0iI2VlNmExYyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==" type="image/svg+xml">
+</head>
+<body class="is-public">
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="/">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJOZXcgQmhhcmF0IFJvYWR3YXlzIj4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iI2VlNmExYyIvPgogIDxwYXRoIGQ9Ik0xMCAyMGgyNnYyMEgxMHoiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJNMzYgMjZoOWw3IDd2N0gzNnoiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJNMzkgMjloNWw0IDRoLTl6IiBmaWxsPSIjMTMyMTRhIi8+CiAgPGNpcmNsZSBjeD0iMTkiIGN5PSI0MiIgcj0iNSIgZmlsbD0iIzEzMjE0YSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxjaXJjbGUgY3g9IjQ0IiBjeT0iNDIiIHI9IjUiIGZpbGw9IiMxMzIxNGEiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8cGF0aCBkPSJNMTQgMjZoMTRNMTQgMzFoMTAiIHN0cm9rZT0iI2VlNmExYyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==" alt="" width="36" height="36">
+      <span><b>New Bharat</b> Roadways</span>
+    </a>
+    <nav class="nav">
+              <a href="/" aria-current="page">Home</a>        <a href="/track">Track</a>        <a href="tel:+919903248711" class="btn btn-sm">Book: 99032 48711</a>
+          </nav>
+  </div>
+</header>
+<main class="wrap main">
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Fast · Reliable · Safe</p>
+    <h1>Kolkata to Baghmundi<br><span>daily parcel service</span></h1>
+    <p class="lead">Your parcel, our responsibility. Trucks leave Kolkata every day for Balarampur, Baghmundi and our Purulia district branches.</p>
+  </div>
+
+  <form class="track-card" action="/track" method="get" role="search">
+    <label for="q">Track your shipment</label>
+    <div class="track-row">
+      <input id="q" name="q" type="text" inputmode="text" autocomplete="off" required
+             placeholder="Tracking ID or Challan No." maxlength="50">
+      <button class="btn" type="submit">Track</button>
+    </div>
+    <p class="hint">Tracking ID is printed on your receipt, e.g. NBR261009K7Q3</p>
+  </form>
+</section>
+
+<section class="section">
+  <h2>Our branches</h2>
+  <ul class="branches">
+          <li>Purulia</li>
+          <li>Manbazar</li>
+          <li>Barabazar</li>
+          <li>Balarampur</li>
+          <li>Baghmundi</li>
+          <li>Jhalda</li>
+          <li>Roghnathpur</li>
+      </ul>
+</section>
+
+<section class="section features">
+  <div><h3>Daily service</h3><p>Loading every day from our Kolkata godown.</p></div>
+  <div><h3>Live status</h3><p>Truck location updated at least every 8 hours.</p></div>
+  <div><h3>Safe delivery</h3><p>Every consignment is challan-recorded and photographed at loading.</p></div>
+</section>
+
+<section class="section cta">
+  <div>
+    <h2>Book a parcel</h2>
+    <p>Call our office or visit the Kolkata godown.</p>
+  </div>
+  <div class="cta-actions">
+    <a class="btn" href="tel:+919903248711">Kolkata · 9903248711</a>
+    <a class="btn btn-outline" href="tel:+919907944937">Balarampur · 9907944937</a>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <strong>New Bharat Roadways</strong>
+      <p>Daily parcel service · Kolkata ⇄ Baghmundi</p>
+    </div>
+    <div>
+      <span class="muted">Kolkata office</span>
+      <a href="tel:+919903248711">9903248711</a>
+    </div>
+    <div>
+      <span class="muted">Balarampur office</span>
+      <a href="tel:+919907944937">9907944937</a>
+    </div>
+    <div class="footer-address">87, Maharshi Devendra Road, Kolkata (Near Manglik Sadi Bari, Bol Bam Dhaba)</div>
+  </div>
+</footer>
+</body>
+</html>
